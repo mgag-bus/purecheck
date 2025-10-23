@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import '../results/results_screen.dart';
+import '../learn/learn_screen.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -33,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                 onPressed: () {
                   // temporary navigation (we’ll wire real scan later)
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => const _TempResultsPlaceholder()),
+                    MaterialPageRoute(builder: (_) => const ResultsScreen()),
                   );
                 },
                 icon: const Icon(Icons.photo_camera_outlined),
@@ -46,7 +49,7 @@ class HomeScreen extends StatelessWidget {
               child: OutlinedButton.icon(
                 onPressed: () {
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => const _TempLearnPlaceholder()),
+                    MaterialPageRoute(builder: (_) => const LearnScreen()),
                   );
                 },
                 icon: const Icon(Icons.menu_book_outlined),
